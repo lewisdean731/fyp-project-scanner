@@ -5,7 +5,7 @@ export const asyncGetRequest = async (
   url: string,
   params?: string[]
 ): Promise<AxiosResponse> => {
-  console.log(`GET ${url}`)
+  console.log(`GET ${url}`);
   return await axios
     .get(url, { params: { ...params, apiKey: fetchEnvVar("API_KEY") } })
     .then((response) => {

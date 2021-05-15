@@ -1,0 +1,19 @@
+{
+  "name": "project-scanner",
+  "version": "0.1.0",
+  "description": "scans projects in firebase and publishes messages about which ones dependency-scanner should scan",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://lewis-dean@bitbucket.org/s5008913/project-scanner.git"
+  },
+  "author": "Lewis Dean",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/s5008913/project-scanner/issues"
+  },
+  "homepage": "https://bitbucket.org/s5008913/project-scanner#readme"
+}

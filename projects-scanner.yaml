@@ -1,0 +1,8 @@
+runtime: nodejs14
+service: projects-scanner
+
+env_variables:
+    API_ENDPOINT: 'https://bu-fyp-s5008913.nw.r.appspot.com/api'
+    API_KEY: 'InsertBeforeDeployment'
+    PUBSUB_TOPIC_NAME: 'projects/bu-fyp-s5008913/topics/project-scan'
+    RUN_DELAY_SECONDS: '30'

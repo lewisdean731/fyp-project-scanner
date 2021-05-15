@@ -4,6 +4,7 @@
   "description": "scans projects in firestore and publishes messages about which ones dependency-scanner should scan",
   "main": "dist/index.js",
   "scripts": {
+    "start": "node ./dist/index.js",
     "compile": "tsc",
     "test": "jest --coverage --silent --verbose",
     "prettier:base": "prettier '**/*.{ts,json,js,md}' --prose-wrap=always",

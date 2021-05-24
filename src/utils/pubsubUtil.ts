@@ -1,7 +1,7 @@
 import { fetchEnvVar } from "./envUtil";
 
 const topicName = fetchEnvVar("PUBSUB_TOPIC_NAME");
-const orderingKey = "project-scanner"
+const orderingKey = "project-scanner";
 
 // Imports the Google Cloud client library
 const { PubSub } = require("@google-cloud/pubsub");
@@ -13,15 +13,15 @@ export async function publishMessage(id: string) {
   const message = {
     data: Buffer.from("Project ID Message"),
     attributes: {
-      projectId: id
+      projectId: id,
     },
-    orderingKey: orderingKey
-  }
+    orderingKey: orderingKey,
+  };
 
   // Publishes the message as a string, e.g. "Hello, world!" or JSON.stringify(someObject)
   try {
     const messageId = await pubSubClient
-      .topic(topicName, {enableMessageOrdering: true})
+      .topic(topicName, { enableMessageOrdering: true })
       .publishMessage(message);
     console.log(`Message ${messageId} published for project ${id}`);
   } catch (error) {
